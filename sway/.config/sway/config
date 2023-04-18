@@ -3,8 +3,6 @@
 for_window [title="Picture-in-Picture"] floating enable, resize set width 23ppt height 23ppt, move position 77ppt 77ppt
 for_window [title="Firefox - Sharing Indicator"] floating enable
 for_window [title="Firefox - Sharing Indicator"] floating enable, move position 79 ppt 0 ppt
-no_focus [app_id="firefox" title="^$"]
-for_window [app_id="firefox" title="^$"] border none, floating enable, move position 79 ppt 88 ppt
 for_window [title="\ -\ Sharing\ Indicator$"] floating enable, sticky enable
 for_window [title="Firefox — Sharing Indicator"] floating enable, move position 96ppt 8ppt
 for_window [title="Firefox — Sharing Indicator"] no_focus
@@ -28,7 +26,8 @@ font pango:monospace 0 titlebar_padding 1
 bindsym $mod+i exec firefox
 bindsym $mod+t exec telegram-desktop
 bindsym $mod+o exec ~/.cargo/bin/neovide 
-bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
+bindsym print exec grimshot copy area
+bindsym shift+print exec grimshot copy window
 # mount hard drive to the dir in home
 exec sudo mount UUID=05ac3a82-5eea-4a4e-bc9d-f5dd48e71a2b  /home/petar/bigboy/
 
@@ -43,11 +42,20 @@ output * bg ~/Pictures/Wallpapers/default.jpg fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output HDMI-A-1 mode 1920x1080  position 0 0
-output DP-3 mode 1920x1080  position 1920 0
-output DP-2 mode 1920x1080  position 3840 0
+input type:keyboard {
+    xkb_layout us,rs(latinunicode),rs
+    xkb_options grp:rctrl_toggle
+}
 
-#
+# HOME
+# output HDMI-A-1 mode 1920x1080  position 0 0
+# output DP-3 mode 1920x1080  position 1920 0
+# output DP-2 mode 1920x1080  position 3840 0
+
+# Work 
+output DVI-D-1  mode 1920x1080  position 0 0
+output HDMI-A-1 mode 1920x1080  position 1920 0
+
 # Example configuration:
 #
 # exec swayidle -w \
