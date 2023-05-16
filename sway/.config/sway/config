@@ -53,17 +53,11 @@ input type:keyboard {
     xkb_options grp:rctrl_toggle
 }
 
-exec /home/petar/Projects/dot-files/sway/.config/sway/display.sh
-# if(env('WM_ENV')=="HOME"){
-# HOME
-    output HDMI-A-1 mode 1920x1080  position 0 0
-    output DP-3 mode 1920x1080  position 1920 0
-    output DP-2 mode 1920x1080  position 3840 0
-# }else{
-# #Work 
-#     output DVI-D-1  mode 1920x1080  position 0 0
-#     output HDMI-A-1 mode 1920x1080  position 1920 0
-# }
+# exec /home/petar/Projects/dot-files/sway/.config/sway/display.sh
+
+output HDMI-A-1 mode 1920x1080  position 0 0
+output DP-3 mode 1920x1080  position 1920 0
+output DP-2 mode 1920x1080  position 3840 0
 
 
 # Example configuration:
