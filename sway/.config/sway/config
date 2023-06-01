@@ -16,8 +16,8 @@ set $down j
 set $up k
 set $right l
 
-# set $term alacritty
-set $term gnome-terminal
+set $term alacritty
+# set $term gnome-terminal
 set $menu wofi --show drun
 gaps inner 10
 
@@ -51,6 +51,7 @@ output * bg ~/Pictures/Wallpapers/default.jpg fill
 input type:keyboard {
     xkb_layout us,rs(latinunicode),rs
     xkb_options grp:rctrl_toggle
+    xkb_options caps:escape
 }
 
 # exec /home/petar/Projects/dot-files/sway/.config/sway/display.sh
