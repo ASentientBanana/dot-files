@@ -21,8 +21,8 @@ set $term alacritty
 set $menu wofi --show drun
 gaps inner 10
 
-default_border none
-default_floating_border none
+# default_border none
+# default_floating_border none
 font pango:monospace 0 titlebar_padding 1
 
 bindsym $mod+i exec firefox
@@ -39,7 +39,11 @@ exec sudo mount UUID=05ac3a82-5eea-4a4e-bc9d-f5dd48e71a2b  /home/petar/bigboy/
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/Wallpapers/default.jpg fill
+output * bg ~/Pictures/Wallpapers/default.png fill
+
+default_border pixel 2
+
+client.focused "#e9e8fc" "#e9e8fc" "#ffffff" "#ffffff" 
 #
 # Example configuration:
 #
